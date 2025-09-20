@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Majid Mumtaz - Strategic Risk & Audit Leader with 20+ years of experience in digital transformation, fraud prevention, and risk management across UAE, KSA, and more.">
+    <meta name="keywords" content="Majid Mumtaz, Internal Audit, Risk Management, Digital Transformation, Fraud Prevention, SOX Compliance, UAE, KSA">
+    <meta name="author" content="Majid Mumtaz">
+    <meta name="robots" content="index, follow">
+    <title>Majid Mumtaz - Strategic Risk & Audit Leader</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --secondary: #1e293b;
+            --accent: #3b82f6;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --background: #ffffff;
+            --surface: #f8fafc;
+            --surface-2: #f1f5f9;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --text-muted: #94a3b8;
+            --border: #e2e8f0;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--background);
+        }
+        
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover,
+        .nav-links a:focus {
+            color: var(--accent);
+            outline: none;
+        }
+        
+        .mobile-menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            color: var(--primary);
+            cursor: pointer;
+        }
+        
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: var(--gradient);
+            color: white;
+            position: relative;
+            overflow: hidden;
+            padding-top: 80px; /* Added to prevent navbar overlap */
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="white" opacity="0.1"><animate attributeName="r" values="2;50;2" dur="20s" repeatCount="indefinite"/></circle></svg>');
+            animation: float 20s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+        
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-content h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+        
+        .hero-bio {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.8;
+            line-height: 1.7;
+        }
+        
+        .hero-metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .metric {
+            text-align: center;
+        }
+        
+        .metric-value {
+            font-size: 2rem;
+            font-weight: 700;
+            display: block;
+        }
+        
+        .metric-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .btn:focus {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+        
+        .btn-primary {
+            background: white;
+            color: var(--primary);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-outline:hover {
+            background: white;
+            color: var(--primary);
+        }
+        
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .profile-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+        
+        .certifications {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+        
+        .cert-badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .section {
+            padding: 5rem 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+        
+        .project-card {
+            background: var(--surface);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.3s;
+            border: 1px solid var(--border);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .project-image {
+            height: 200px;
+            background: var(--gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            object-fit: cover;
+            loading: lazy;
+        }
+        
+        .project-content {
+            padding: 2rem;
+        }
+        
+        .project-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .project-category {
+            background: var(--accent);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .project-duration {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        
+        .project-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+        
+        .project-client {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+        
+        .project-description {
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .project-results {
+            background: var(--surface-2);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .project-results h4 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+        
+        .results-list {
+            list-style: none;
+            font-size: 0.9rem;
+        }
+        
+        .results-list li {
+            margin-bottom: 0.3rem;
+            padding-left: 1rem;
+            position: relative;
+        }
+        
+        .results-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: 600;
+        }
+        
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .tech-tag {
+            background: var(--surface-2);
+            color: var(--text-secondary);
+            padding: 0.3rem 0.6rem;
+            border-radius: 10px;
+            font-size: 0.75rem;
+            border: 1px solid var(--border);
+        }
+        
+        .publications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .publication-card {
+            background: var(--surface);
+            border-radius: 12px;
+            padding: 2rem;
+            border-left: 4px solid var(--accent);
+            box-shadow: var(--shadow);
+            transition: all 0.3s;
+        }
+        
+        .publication-card:hover {
+            transform: translateY(-3px);
+        }
+        
+        .publication-header {
+            margin-bottom: 1rem;
+        }
+        
+        .publication-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+        
+        .publication-subtitle {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .publication-type {
+            background: var(--success);
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: 10px;
+            font-size: 0.75rem;
+            display: inline-block;
+        }
+        
+        .publication-features {
+            list-style: none;
+            margin: 1rem 0;
+        }
+        
+        .publication-features li {
+            margin-bottom: 0.5rem;
+            padding-left: 1rem;
+            position: relative;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+        
+        .publication-features li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: 600;
+        }
+        
+        .newsletter-section {
+            background: var(--surface);
+        }
+        
+        .newsletter-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .newsletter-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 2rem 0;
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+        
+        .newsletter-stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent);
+            display: block;
+        }
+        
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .topic-tag {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+        }
+        
+        .footer {
+            background: var(--primary);
+            color: white;
+            padding: 3rem 0 2rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 1rem;
+        }
+        
+        .contact-info {
+            list-style: none;
+        }
+        
+        .contact-info li {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .contact-info a:hover,
+        .contact-info a:focus {
+            color: var(--accent);
+            outline: none;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        @media (max-width: 768px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background: var(--background);
+                padding: 1rem;
+                box-shadow: var(--shadow);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .mobile-menu-toggle {
+                display: block;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="logo" aria-label="Majid Mumtaz logo">Majid Mumtaz</div>
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" role="menubar">
+                <li role="menuitem"><a href="#about">About</a></li>
+                <li role="menuitem"><a href="#work">Work</a></li>
+                <li role="menuitem"><a href="#expertise">Expertise</a></li>
+                <li role="menuitem"><a href="#testimonials">Testimonials</a></li>
+                <li role="menuitem"><a href="#publications">Publications</a></li>
+                <li role="menuitem"><a href="#articles">Articles</a></li>
+                <li role="menuitem"><a href="#newsletter">Newsletter</a></li>
+                <li role="menuitem"><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero" id="about" aria-labelledby="about-heading">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 id="about-heading">Majid Mumtaz</h1>
+                <p class="hero-subtitle">Transforming Organizations Through Data-Driven Risk Management</p>
+                <p class="hero-bio">Internal Audit Director with 20+ years transforming audit functions across UAE, Saudi Arabia, Qatar, Pakistan, Bahrain, Kuwait, Poland, and Denmark. Specializing in digital transformation, fraud prevention, and strategic risk advisory for technology companies and family offices.</p>
+                
+                <div class="hero-metrics">
+                    <div class="metric" aria-label="Years of Experience">
+                        <span class="metric-value">20+</span>
+                        <span class="metric-label">Years Experience</span>
+                    </div>
+                    <div class="metric" aria-label="Cost Savings">
+                        <span class="metric-value">AED 10M+</span>
+                        <span class="metric-label">Cost Savings</span>
+                    </div>
+                    <div class="metric" aria-label="Companies Served">
+                        <span class="metric-value">50+</span>
+                        <span class="metric-label">Companies Served</span>
+                    </div>
+                    <div class="metric" aria-label="Newsletter Readers">
+                        <span class="metric-value">3,000+</span>
+                        <span class="metric-label">Newsletter Readers</span>
+                    </div>
+                </div>
+                
+                <div class="hero-cta">
+                    <a href="#work" class="btn btn-primary" aria-label="View My Work">
+                        <i class="fas fa-briefcase" aria-hidden="true"></i>
+                        View My Work
+                    </a>
+                    <a href="#contact" class="btn btn-outline" aria-label="Get In Touch">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                        Get In Touch
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="profile-card" aria-label="Profile Summary">
+                    <div class="profile-image">
+                        <i class="fas fa-user-tie" aria-hidden="true"></i>
+                    </div>
+                    <h3>Strategic Risk & Audit Leader</h3>
+                    <p>Dubai, UAE</p>
+                    <div class="certifications">
+                        <span class="cert-badge">CIA</span>
+                        <span class="cert-badge">ACA</span>
+                        <span class="cert-badge">FCCA</span>
+                        <span class="cert-badge">GRCP</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="work" aria-labelledby="work-heading">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" id="work-heading">Featured Work</h2>
+                <p class="section-subtitle">Transformational projects that delivered measurable business impact</p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image" aria-hidden="true">💻</div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">Digital Innovation</span>
+                            <span class="project-duration">2022-2025</span>
+                        </div>
+                        <h3 class="project-title">Enterprise Digital Transformation</h3>
+                        <p class="project-client">Kitopi (Technology Sector)</p>
+                        <p class="project-description">Implemented RPA, data analytics, and AI-powered audit tools across 7 countries (UAE, KSA, Qatar, Kuwait, Bahrain, Poland, Denmark)</p>
+                        <div class="project-results">
+                            <h4>Key Results:</h4>
+                            <ul class="results-list" aria-label="Key Results for Enterprise Digital Transformation">
+                                <li>40% reduction in audit cycle time</li>
+                                <li>100% coverage of high-risk areas</li>
+                                <li>97% SOX compliance first-pass rate</li>
+                                <li>80% reduction in control deficiencies</li>
+                            </ul>
+                        </div>
+                        <div class="tech-tags">
+                            <span class="tech-tag">RPA</span>
+                            <span class="tech-tag">Data Analytics</span>
+                            <span class="tech-tag">AI/ML</span>
+                            <span class="tech-tag">SOX Framework</span>
+                            <span class="tech-tag">GRC Platforms</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image" aria-hidden="true">🤖</div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">Machine Learning</span>
+                            <span class="project-duration">2022-2023</span>
+                        </div>
+                        <h3 class="project-title">ML-Powered Revenue Assurance</h3>
+                        <p class="project-client">Kitopi (Cloud Kitchen Leader)</p>
+                        <p class="project-description">Deployed advanced analytics solution with anomaly detection algorithms</p>
+                        <div class="project-results">
+                            <h4>Key Results:</h4>
+                            <ul class="results-list" aria-label="Key Results for ML-Powered Revenue Assurance">
+                                <li>AED 3.2M recovered in revenue leakage</li>
+                                <li>100% transaction monitoring coverage</li>
+                                <li>Real-time pricing anomaly detection</li>
+                                <li>Systematic billing error identification</li>
+                            </ul>
+                        </div>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Machine Learning</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Data Analytics</span>
+                            <span class="tech-tag">Real-time Monitoring</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image" aria-hidden="true">📊</div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">Organizational Development</span>
+                            <span class="project-duration">2017-2020</span>
+                        </div>
+                        <h3 class="project-title">Audit Function Maturity Transformation</h3>
+                        <p class="project-client">Al-Faisaliah Group (Multi-Billion Conglomerate)</p>
+                        <p class="project-description">Comprehensive transformation program with data analytics and strategic advisory positioning</p>
+                        <div class="project-results">
+                            <h4>Key Results:</h4>
+                            <ul class="results-list" aria-label="Key Results for Audit Function Maturity Transformation">
+                                <li>Level 2 to Level 4 maturity advancement</li>
+                                <li>40+ audit processes redesigned</li>
+                                <li>20+ member audit organization built</li>
+                                <li>35% reduction in cross-portfolio risk</li>
+                            </ul>
+                        </div>
+                        <div class="tech-tags">
+                            <span class="tech-tag">IIA Framework</span>
+                            <span class="tech-tag">Risk Analytics</span>
+                            <span class="tech-tag">Process Automation</span>
+                            <span class="tech-tag">Dashboard Development</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image" aria-hidden="true">🔒</div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">Fraud Prevention</span>
+                            <span class="project-duration">2017</span>
+                        </div>
+                        <h3 class="project-title">Predictive Fraud Prevention Platform</h3>
+                        <p class="project-client">Al-Faisaliah Group</p>
+                        <p class="project-description">ML-powered predictive analytics platform with real-time anomaly detection</p>
+                        <div class="project-results">
+                            <h4>Key Results:</h4>
+                            <ul class="results-list" aria-label="Key Results for Predictive Fraud Prevention Platform">
+                                <li>82% reduction in fraud losses</li>
+                                <li>Real-time transaction monitoring</li>
+                                <li>100K+ daily transactions processed</li>
+                                <li>Predictive risk scoring implemented</li>
+                            </ul>
+                        </div>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Machine Learning</span>
+                            <span class="tech-tag">Predictive Analytics</span>
+                            <span class="tech-tag">Real-time Processing</span>
+                            <span class="tech-tag">Risk Scoring</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="expertise" aria-labelledby="expertise-heading">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" id="expertise-heading">Industry Expertise</h2>
+                <p class="section-subtitle">Deep specialization across key industries based on 20+ years of experience</p>
+            </div>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div style="background: white; padding: 1.5rem; border-radius: 10px; margin-bottom: 1rem; border-left: 4px solid var(--accent); box-shadow: var(--shadow);">
+                    <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Technology & Cloud Kitchens</h4>
+                    <p style="color: var(--accent); font-weight: 600; margin-bottom: 0.5rem;">3+ years</p>
+                    <p style="margin-bottom: 0.5rem; font-size: 0.9rem;">Digital transformation, SOX compliance, revenue assurance</p>
+                    <p style="color: var(--text-secondary); font-size: 0.85rem;"><strong>Notable clients:</strong> Kitopi (across UAE, KSA, Qatar, Kuwait, Bahrain, Poland, Denmark)</p>
+                </div>
+                <div style="background: white; padding: 1.5rem; border-radius: 10px; margin-bottom: 1rem; border-left: 4px solid var(--accent); box-shadow: var(--shadow);">
+                    <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Family Offices & Conglomerates</h4>
+                    <p style="color: var(--accent); font-weight: 600; margin-bottom: 0.5rem;">6+ years</p>
+                    <p style="margin-bottom: 0.5rem; font-size: 0.9rem;">Multi-entity governance, risk management, audit maturity transformation</p>
+                    <p style="color: var(--text-secondary); font-size: 0.85rem;"><strong>Notable clients:</strong> Al Faisaliah Group (multi-billion dollar conglomerate in Saudi Arabia)</p>
+                </div>
+                <div style="background: white; padding: 1.5rem; border-radius: 10px; margin-bottom: 1rem; border-left: 4px solid var(--accent); box-shadow: var(--shadow);">
+                    <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Food Service & Restaurant Operations</h4>
+                    <p style="color: var(--accent); font-weight: 600; margin-bottom: 0.5rem;">3+ years</p>
+                    <p style="margin-bottom: 0.5rem; font-size: 0.9rem;">Franchise governance, operational excellence, brand standards</p>
+                    <p style="color: var(--text-secondary); font-size: 0.85rem;"><strong>Notable clients:</strong> McDonald's franchise operations (180+ locations in Saudi Arabia)</p>
+                </div>
+                <div style="background: white; padding: 1.5rem; border-radius: 10px; margin-bottom: 1rem; border-left: 4px solid var(--accent); box-shadow: var(--shadow);">
+                    <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Professional Services (Big 4)</h4>
+                    <p style="color: var(--accent); font-weight: 600; margin-bottom: 0.5rem;">8+ years</p>
+                    <p style="margin-bottom: 0.5rem; font-size: 0.9rem;">SOX compliance, enterprise risk management, client advisory</p>
+                    <p style="color: var(--text-secondary); font-size: 0.85rem;"><strong>Notable clients:</strong> KPMG (Qatar, Bahrain), Ernst & Young (Pakistan)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="testimonials" aria-labelledby="testimonials-heading">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" id="testimonials-heading">Client Testimonials</h2>
+                <p class="section-subtitle">What industry leaders say about working with me</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: var(--shadow); border-top: 4px solid var(--accent);">
+                    <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.5rem; font-style: italic; color: var(--text-primary);">"As ALFA CO became successful and a large enough organization to implement an Official Internal Audit function, I was fortunate to identify Majid Mumtaz as our Internal Audit Manager, eventually, Director. His intuitive approach was appreciated by the team and allowed an efficient and speedy, yet thoughtful improvement of ALFA's systems and culture."</p>
+                    <div style="border-top: 1px solid var(--border); padding-top: 1rem;">
+                        <p style="font-weight: 600; color: var(--primary);">Steve Skoien</p>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">Restaurant Executive</p>
+                        <p style="color: var(--accent); font-size: 0.9rem;">Al Faisaliah Group - ALFA Division</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: 0.5rem;"><em>Direct Manager</em></p>
+                    </div>
+                </div>
+                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: var(--shadow); border-top: 4px solid var(--accent);">
+                    <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.5rem; font-style: italic; color: var(--text-primary);">"I have worked with Majid for the past several years in his capacity of Director of Internal Audit. He has the strongest skills of any internal auditor that I have had the privilege of working with. He is methodical in his approach, yet intuitive in following the clues. He has made our organization stronger and safer because of his diligence and powerful skill set."</p>
+                    <div style="border-top: 1px solid var(--border); padding-top: 1rem;">
+                        <p style="font-weight: 600; color: var(--primary);">Lane Cardwell</p>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">President</p>
+                        <p style="color: var(--accent); font-size: 0.9rem;">Cardwell Hospitality Advisory, Inc.</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: 0.5rem;"><em>Direct Manager</em></p>
+                    </div>
+                </div>
+                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: var(--shadow); border-top: 4px solid var(--accent);">
+                    <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.5rem; font-style: italic; color: var(--text-primary);">"In a sea of madness its important to have a voice of reason, Majid Mumtaz is that voice! An individual with impeccable ethical standards, he is also fully aware of the need to balance the requirements of business. His personable persona and good humor can be relied on to defuse potentially explosive situations, making him an invaluable addition to any audit, or senior management team."</p>
+                    <div style="border-top: 1px solid var(--border); padding-top: 1rem;">
+                        <p style="font-weight: 600; color: var(--primary);">Leslie D. Bailey MSc FIH</p>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">Managing Director</p>
+                        <p style="color: var(--accent); font-size: 0.9rem;">Ruby Tuesday</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: 0.5rem;"><em>Senior Colleague</em></p>
+                    </div>
+                </div>
+                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: var(--shadow); border-top: 4px solid var(--accent);">
+                    <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.5rem; font-style: italic; color: var(--text-primary);">"Majid led Alfa's audit team during my tenure as head of Supply Chain. Through his leadership skills, industry knowledge, business acumen, and experience on the ground, he was critical to the success of the Audit function. He brought to the audit team a hands-on approach to not only identifying risks but also how to best mitigate those risks, in a consultative manner."</p>
+                    <div style="border-top: 1px solid var(--border); padding-top: 1rem;">
+                        <p style="font-weight: 600; color: var(--primary);">Osama Abu Baker</p>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">Supply Chain Director</p>
+                        <p style="color: var(--accent); font-size: 0.9rem;">Al-Faisaliah Group</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: 0.5rem;"><em>Business Partner</em></p>
+                    </div>
+                </div>
+                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: var(--shadow); border-top: 4px solid var(--accent);">
+                    <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.5rem; font-style: italic; color: var(--text-primary);">"It's a pleasure to work with Majid. He is a capable, talented leader, with a real 'can do' attitude. He is a true leader who has vision and at the same time is very realistic about his plan in achieving his vision, he is knowledgeable, hands on, reliable and flexible in his approach."</p>
+                    <div style="border-top: 1px solid var(--border); padding-top: 1rem;">
+                        <p style="font-weight: 600; color: var(--primary);">Mohammad Elrifai</p>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">Director of Internal Audit</p>
+                        <p style="color: var(--accent); font-size: 0.9rem;">McDonald's</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: 0.5rem;"><em>Direct Report</em></p>
+                    </div>
+                </div>
+                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: var(--shadow); border-top: 4px solid var(--accent);">
+                    <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.5rem; font-style: italic; color: var(--text-primary);">"I recall Majid as one of the most dependable managers in Doha office. His Project Management skills were really good, he managed multiple projects with very limited resources, managed the clients very well and always completed the jobs on time. He demonstrated excellent report writing skills and had a very good eye for detail."</p>
+                    <div style="border-top: 1px solid var(--border); padding-top: 1rem;">
+                        <p style="font-weight: 600; color: var(--primary);">Arindam Ghosh</p>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">Partner - Government and Public Sector Advisory</p>
+                        <p style="color: var(--accent); font-size: 0.9rem;">KPMG</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: 0.5rem;"><em>Senior Colleague</em></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="publications" aria-labelledby="publications-heading">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" id="publications-heading">Publications</h2>
+                <p class="section-subtitle">Thought leadership and practical frameworks for risk professionals</p>
+            </div>
+            <div class="publications-grid">
+                <div class="publication-card">
+                    <div class="publication-header">
+                        <h3 class="publication-title">Fraud Prevention Guide</h3>
+                        <p class="publication-subtitle">A Practical Reference for Risk Management Professionals</p>
+                        <span class="publication-type">Professional Guide</span>
+                    </div>
+                    <p class="publication-description">Comprehensive resource addressing organizational fraud challenges</p>
+                    <ul class="publication-features" aria-label="Features of Fraud Prevention Guide">
+                        <li>190 fraud scenarios across 19 departments</li>
+                        <li>Risk impact ratings and early warning indicators</li>
+                        <li>Ready-to-deploy controls (COSO, ISO 31000, ACFE)</li>
+                        <li>Implementation timelines with KPIs</li>
+                    </ul>
+                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border);">
+                        <strong style="color: var(--accent);">Impact:</strong> AED 1.2B fraud impact addressed in UAE (2024)
+                    </div>
+                </div>
+                <div class="publication-card">
+                    <div class="publication-header">
+                        <h3 class="publication-title">SOX Internal Controls Implementation Guide</h3>
+                        <p class="publication-subtitle">Practical Framework for Compliance Excellence</p>
+                        <span class="publication-type">34-page Implementation Guide</span>
+                    </div>
+                    <p class="publication-description">Actionable insights for finance and audit teams on SOX compliance</p>
+                    <ul class="publication-features" aria-label="Features of SOX Internal Controls Implementation Guide">
+                        <li>Three Lines Model organizational framework</li>
+                        <li>Implementation timelines and mitigation strategies</li>
+                        <li>Entity Level, IT General, and Process Level Controls</li>
+                        <li>Cybersecurity disclosure integration</li>
+                    </ul>
+                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border);">
+                        <strong style="color: var(--accent);">Impact:</strong> Adaptable across various organizational contexts
+                    </div>
+                </div>
+                <div class="publication-card">
+                    <div class="publication-header">
+                        <h3 class="publication-title">ITGC Program Guide</h3>
+                        <p class="publication-subtitle">Strategic Approach to Security & Enterprise Value</p>
+                        <span class="publication-type">Kindle Edition</span>
+                    </div>
+                    <p class="publication-description">Strategic framework for robust ITGC programs beyond compliance</p>
+                    <ul class="publication-features" aria-label="Features of ITGC Program Guide">
+                        <li>ITGC Maturity Model assessment</li>
+                        <li>Best-in-class policies and procedures</li>
+                        <li>KPI Dashboard for business intelligence</li>
+                        <li>SOX Readiness Checklist</li>
+                    </ul>
+                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border);">
+                        <strong style="color: var(--accent);">Impact:</strong> Essential for digital transformation leaders
+                    </div>
+                </div>
+                <div class="publication-card">
+                    <div class="publication-header">
+                        <h3 class="publication-title">Internal Audit Guide for Middle East F&B</h3>
+                        <p class="publication-subtitle">Regional Compliance and Operational Excellence</p>
+                        <span class="publication-type">Regional Guide</span>
+                    </div>
+                    <p class="publication-description">Structured approach for dine-in business audits in Middle East</p>
+                    <ul class="publication-features" aria-label="Features of Internal Audit Guide for Middle East F&B">
+                        <li>Comprehensive audit framework</li>
+                        <li>Middle East-specific regulations (VAT, labor, food safety)</li>
+                        <li>Risk control and compliance tools</li>
+                        <li>Operational efficiency strategies</li>
+                    </ul>
+                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border);">
+                        <strong style="color: var(--accent);">Impact:</strong> Tailored for GCC market requirements
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="articles" aria-labelledby="articles-heading">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" id="articles-heading">LinkedIn Articles</h2>
+                <p class="section-subtitle">Thought leadership articles on risk management and audit transformation</p>
+            </div>
+            <div class="publications-grid">
+                <div class="publication-card">
+                    <div class="publication-header">
+                        <h3 class="publication-title">Workforce Planning Failures</h3>
+                        <span class="publication-type">LinkedIn Article</span>
+                    </div>
+                    <p class="publication-description">The boardroom conversation inevitably turns to growth, market share, and operational excellence. Yet beneath these strategic imperatives lies an often overlooked foundation...</p>
+                </div>
+                <div class="publication-card">
+                    <div class="publication-header">
+                        <h3 class="publication-title">Mitigating Real Estate Risks in F&B: A Monte Carlo Approach</h3>
+                        <span class="publication-type">LinkedIn Article</span>
+                    </div>
+                    <p class="publication-description">A Monte Carlo Approach to Lease Agreements & Compliance in the food and beverage industry</p>
+                </div>
+                <div class="publication-card">
+                    <div class="publication-header">
+                        <h3 class="publication-title">The Decline of Forced Rating Systems and Their Persistence in Middle Eastern SMEs</h3>
+                        <span class="publication-type">LinkedIn Article</span>
+                    </div>
+                    <p class="publication-description">Forced rating systems, once a cornerstone of corporate performance management, have largely fallen out of favor globally due to their inherent flaws</p>
+                </div>
+                <div class="publication-card">
+                    <div class="publication-header">
+                        <h3 class="publication-title">Driving Confidence in Uncertainty</h3>
+                        <span class="publication-type">LinkedIn Article</span>
+                    </div>
+                    <p class="publication-description">Leveraging Monte Carlo Simulation for Strategic Risk Mitigation in the contemporary risk management landscape</p>
+                </div>
+                <div class="publication-card">
+                    <div class="publication-header">
+                        <h3 class="publication-title">Anomaly Detection: A Strategic Imperative for Modern Internal Audit</h3>
+                        <span class="publication-type">LinkedIn Article</span>
+                    </div>
+                    <p class="publication-description">Internal Audit's core mandate encompasses providing assurance over critical business processes and identifying significant risks</p>
+                </div>
+                <div class="publication-card">
+                    <div class="publication-header">
+                        <h3 class="publication-title">The Algorithmic Auditor</h3>
+                        <span class="publication-type">LinkedIn Article</span>
+                    </div>
+                    <p class="publication-description">Why Scripting is Non-Negotiable for Future-Ready Internal Audit. The risk landscape is transforming at breakneck speed</p>
+                </div>
+                <div class="publication-card">
+                    <div class="publication-header">
+                        <h3 class="publication-title">The Governance Premium</h3>
+                        <span class="publication-type">LinkedIn Article</span>
+                    </div>
+                    <p class="publication-description">How Overlooked Controls Are Costing Middle Eastern Companies Billions. Robust entity-level controls have become a competitive advantage</p>
+                </div>
+                <div class="publication-card">
+                    <div class="publication-header">
+                        <h3 class="publication-title">Strengthening Internal Audit Independence in the Middle East</h3>
+                        <span class="publication-type">LinkedIn Article</span>
+                    </div>
+                    <p class="publication-description">Internal audit functions across the Middle East stand at a critical crossroads as regional businesses pursue ambitious growth strategies</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section newsletter-section" id="newsletter" aria-labelledby="newsletter-heading">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" id="newsletter-heading">Newsletter & Thought Leadership</h2>
+                <p class="section-subtitle">Weekly insights on risk, compliance, and digital innovation</p>
+            </div>
+            <div class="newsletter-content">
+                <h3>Risk, Compliance & Innovation</h3>
+                <p>Expert insights on strategic risk and digital innovation</p>
+                <div class="newsletter-stats">
+                    <div class="newsletter-stat" aria-label="Newsletter Subscribers">
+                        <span class="stat-number">3,000+</span>
+                        <span class="stat-label">Subscribers</span>
+                    </div>
+                    <div class="newsletter-stat" aria-label="Editions Published">
+                        <span class="stat-number">18</span>
+                        <span class="stat-label">Editions Published</span>
+                    </div>
+                    <div class="newsletter-stat" aria-label="Publication Frequency">
+                        <span class="stat-number">Weekly</span>
+                        <span class="stat-label">Publication</span>
+                    </div>
+                </div>
+                <div class="topics-grid">
+                    <div class="topic-tag">AI in Internal Audit</div>
+                    <div class="topic-tag">SOX Compliance Strategies</div>
+                    <div class="topic-tag">Fraud Prevention Techniques</div>
+                    <div class="topic-tag">Risk Management Innovation</div>
+                    <div class="topic-tag">GCC Regulatory Updates</div>
+                    <div class="topic-tag">Digital Transformation</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" id="contact" aria-labelledby="contact-heading">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 id="contact-heading">Let's Work Together</h3>
+                    <p>Ready to transform your risk management approach? Let's discuss how we can drive measurable improvements in your organization.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul class="contact-info" aria-label="Contact Information">
+                        <li><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:majidrajpar@gmail.com">majidrajpar@gmail.com</a></li>
+                        <li><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+971507471708">(+971) 507471708</a></li>
+                        <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Dubai, UAE</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <ul class="contact-info" aria-label="Social Connections">
+                        <li><i class="fab fa-linkedin" aria-hidden="true"></i> <a href="https://linkedin.com/in/majid-m-4b097118" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a></li>
+                        <li><i class="fas fa-globe" aria-hidden="true"></i> <a href="https://veritux.com/consultants/majid-mumtaz" target="_blank" rel="noopener noreferrer">Professional Profile</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Majid Mumtaz. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', () => {
+            const navLinks = document.querySelector('.nav-links');
+            const menuToggle = document.querySelector('.mobile-menu-toggle');
+            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+            navLinks.classList.toggle('active');
+            menuToggle.setAttribute('aria-expanded', !isExpanded);
+            menuToggle.innerHTML = isExpanded ? '<i class="fas fa-bars"></i>' : '<i class="fas fa-times"></i>';
+        });
+
+        // Lazy load images
+        document.addEventListener('DOMContentLoaded', () => {
+            const images = document.querySelectorAll('.project-image');
+            if ('IntersectionObserver' in window) {
+                const observer = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.background = 'var(--gradient)';
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                });
+                images.forEach(image => observer.observe(image));
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
